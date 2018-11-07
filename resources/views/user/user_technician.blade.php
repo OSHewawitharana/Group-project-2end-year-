@@ -10,14 +10,16 @@
     <link rel="icon" type="image/png" href="images/logo.png" />
 
     <title>Login page</title>
- <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
 <section>
     <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
       <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
            <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
       </div>
       <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-          
+          <!-- <h2 style="color:#FFFFFF;  text-justify:inter-word;text-align:Center;font-weight:550;">ASPARAI<br><span style="margin-left:15px; margin-right:15px;"> REPAIR</span><span  style="margin-left:5px; margin-right:10px;">  &</span><span  style="margin-left:5px; margin-right:10px;"> MAINTENANCE<span><span  style="margin-left:5px; margin-right:10px;"> SERVICE<span></h2> -->
+
             <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
        </ul>
     </nav>
@@ -32,19 +34,18 @@
     <a class="navbar-brand" href="#"></a>
     <ul class="navbar-nav mt-0">
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="{{url('employreg')}}">Employee Registration<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-left" href="#">Job Details<span class="sr-only">(current)</span></a>
       </li>
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Job details</a>
+        <a class="nav-link text-left" href="#">Estimation</a>
       </li>
 
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Customer Details</a>
+        <a class="nav-link text-left" href="#">My status</a>
       </li>
 
-
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Employee Details</a>
+        <a class="nav-link text-left" href="#">Job status</a>
       </li>
 
 
@@ -72,7 +73,7 @@
     </nav>
   </section>
   <section>
-    <div class="col-lg-10 mt-4">
+   <!--  <div class="col-lg-10 mt-4">
          <table class="table  table-striped table-responsive" width="100%">
                 <thead>
                        <tr class="bg-primary"  style="color:#FFFFFF;">
@@ -110,7 +111,7 @@
 
               </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 
   </section>

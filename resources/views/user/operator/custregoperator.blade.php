@@ -99,44 +99,59 @@
              <img src="{{ asset('images/logo.png')}}" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
         </div>
         <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-            <!-- <h2 style="color:#FFFFFF;  text-justify:inter-word;text-align:Center;font-weight:550;">ASPARAI<br><span style="margin-left:15px; margin-right:15px;"> REPAIR</span><span  style="margin-left:5px; margin-right:10px;">  &</span><span  style="margin-left:5px; margin-right:10px;"> MAINTENANCE<span><span  style="margin-left:5px; margin-right:10px;"> SERVICE<span></h2> -->
 
               <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
          </ul>
       </nav>
     </section>
 
-    <section>
-      <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="{{url('home')}}"></a>
-      <ul class="navbar-nav mt-0">
-        <li class="mangonav_tab nav-item active ml-0 col-md-3  col-auto mr-auto">
-          <a class="nav-link text-left" href="{{url('home')}}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="mangonav_tab nav-item active ml-0 col-md-3  col-auto mr-auto">
-          <!--<a class="nav-link text-left" href="{{url('products')}}">Products</a>-->
-        </li>
-        <li class="mangonav_tab nav-item active ml-0 col-md-3 col-auto mr-auto">
-          <!--<a class="nav-link text-left" href="{{url('services')}}">Services</a>-->
-        </li>
-        <li class="mangonav_tab nav-item active ml-0 col-md-3 col-auto mr-auto">
-          <!--<a class="nav-link text-left" href="{{url('contacts')}}">Contact</a>-->
-        </li>
+     <section>
+    <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#"></a>
+    <ul class="navbar-nav mt-0">
 
 
-      </ul>
-      <ul class="navbar-nav ml-auto mt-0">
-        <li class="mangonav_tab nav-item active col-md-2 col-auto mr-auto">
-          <a class="nav-link" href="{{url('user')}}">Login</a>
-        </li>
-      </ul>
-      </div>
-      </nav>
-        </section>
+      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+        <a class="nav-link text-left" href="{{url('custregoperator')}}">Customer registration</a>
+      </li>
+      
+      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+        <a class="nav-link text-left" href="#">Job requests<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+        <a class="nav-link text-left" href="#">Estimation</a>
+      </li>
+
+      
+
+     
+    </ul>
+    <ul class="navbar-nav ml-auto mt-0">
+      <li class="nav-item dropdown mangonav_tab">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <strong style="font-weight:bold; font-size:18px;">{{ Auth::user()->fname }}(<span>{{ Auth::user()->admin }}</span>) <span class="caret"></span></strong>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+    </ul>
+    </div>
+    </nav>
+  </section>
     <br>
 
   <section>
@@ -152,18 +167,18 @@
               <div class="form-group row">
 
                    <div class="col-sm-6 mb-1">
-                      <input type="text" class="form-control"  name="fname" value="{{old('fname')}}" placeholder="Enter your first name" required>
+                      <input type="text" class="form-control"  name="fname" value="{{old('fname')}}" placeholder="Enter customer first name" required>
                    </div>
 
                    <div class="col-sm-6 mb-1">
-                      <input type="text" class="form-control" name="lname" value="{{old('lname')}}" placeholder="Enter your last name" required>
+                      <input type="text" class="form-control" name="lname" value="{{old('lname')}}" placeholder="Enter customer last name" required>
                    </div>
               </div>
 
               <div class="form-group row">
 
                    <div class="col-sm-12 mt-1">
-                      <input type="email" class="form-control" name="email" value="{{old('email')}}" placeholder="Enter your e-mail address" required>
+                      <input type="email" class="form-control" name="email" value="{{old('email')}}" placeholder="Enter customer's e-mail address" required>
                    </div>
               </div>
 
@@ -177,42 +192,42 @@
           @endif
 
                    <div class="col-sm-12 mt-1">
-                      <input type="password" class="form-control" name="password"  id="password" placeholder="Enter your password" required>
+                      <input type="password" class="form-control" name="password"  id="password" placeholder="Enter a password" required>
                    </div>
               </div>
 
               <div class="form-group row">
 
                    <div class="col-sm-12 mt-1">
-                      <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm your password">
+                      <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm the password">
                    </div>
               </div>
 
 			  <div class="form-group row">
 
                    <div class="col-sm-12 mt-1">
-                      <input type="text" class="form-control" name="nid" value="{{old('nid')}}" placeholder="Enter Your NIC Number" required>
+                      <input type="text" class="form-control" name="nid" value="{{old('nid')}}" placeholder="Enter customer NIC Number" required>
                    </div>
               </div>
 
               <div class="form-group row">
 
                     <div class="col-sm-12 mt-1">
-                        <input type="text" class="form-control" name="mobile" value="{{old('mobile')}}" placeholder="Enter your contact number" required>
+                        <input type="text" class="form-control" name="mobile" value="{{old('mobile')}}" placeholder="Enter customer contact number" required>
                     </div>
               </div>
 
 
               <div class="form-group row">
                    <div class="col-sm-12 mt-1">
-                        <input type="text" class="form-control" name="company" value="{{old('company')}}" placeholder="Enter your work place" required>
+                        <input type="text" class="form-control" name="company" value="{{old('company')}}" placeholder="Enter customer work place" required>
                     </div>
               </div>
 
                <div class="form-group row">
 
                      <div class="col-sm-12 mt-1">
-                         <input type="text" class="form-control" name="address" value="{{old('address')}}" placeholder="Enter your work place address" required>
+                         <input type="text" class="form-control" name="address" value="{{old('address')}}" placeholder="Enter customer work place address" required>
                      </div>
                </div>
 

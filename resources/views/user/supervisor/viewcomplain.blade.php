@@ -8,98 +8,11 @@
     <link rel="stylesheet" href="/css/master.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
+    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
 
     <title>Login page</title>
-    <style media="screen">
-
-
-    .mango_mid{
-      min-height: 50px;
-      background-color:#031768;
-    }
-
-    .mango_bottom{
-      min-height: 30px;
-      background-color:#CCCCCC ;
-      border-bottom: solid 2px #CCCCCC ;
-    }
-    .mango_texthead{
-      font-weight: bold;
-      font-family: Roboto;
-      color: #FFFFFF;
-    }
-
-    .mangonav_tab{
-      font-size: 20px;
-      font-weight: bold;
-      font-style: normal;
-      font-family:Roboto Medium;
-      color: #FFFFFF;
-    }
-    /*.imgshow{
-      border: solid 2px #000000;
-      border-bottom: solid 2px #000000;
-    }*/
-    .mango_form{
-        background-color:#ffffff;
-        border: 2px solid #f2f2f2;
-		box-shadow: 1px 1px 1px 1px;
-
-      }
-      label{
-        font-size: 18px;
-        font-weight: bold;
-        font-style: normal;
-        margin-top: 0PX;
-        font-family:sans-serif;
-        color: #000;
-      }
-      .form-group{
-        margin-top:30px;
-      }
-      input[type="text"]{
-		 border: solid #bfbfbf 2px;
-      }
-      input[type="email"]{
-
-        border: solid #bfbfbf 2px;
-      }
-	  .message{
-	      border: solid #bfbfbf 2px;
-	  }
-	  textarea{
-		  border: solid #bfbfbf 2px;
-	  }
-      h3{
-        text-justify:inter-word;
-        margin-top:60px;
-        margin-bottom:60px;
-      }
-	  .link_text{
-		  font-size:12px;
-		  font-weight:bold;
-	  }
-
-	  li a{
-		  color:#ffffff;
-	  }
-
-
-      input[type="submit"]{
-		font-size:18px;
-		font-weight:bold;
-        float:right;
-        margin-top:20px;
-      }
-
-	  .card-header{
-		  background-color:#00F;
-		  color:#FFFFFF;
-		  height:50px;
-		  font-size:16px;
-		  font-weight:bold;
-	  }
-</style>
+    
 <section>
     <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
       <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
@@ -113,8 +26,7 @@
     </nav>
   </section>
 
-  <section>
-    <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+  <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -122,16 +34,13 @@
     <a class="navbar-brand" href="#"></a>
     <ul class="navbar-nav mt-0">
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="http://localhost:8000/home">Service request<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-left" href="#" >Job Details<span class="sr-only">(current)</span></a>
       </li>
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="#">Estimation</a>
       </li>
 
-      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Ranking</a>
-      </li>
-
+     
 
     </ul>
     <ul class="navbar-nav ml-auto mt-0">
@@ -181,7 +90,9 @@
                       <td>{{$complain->description}}</td>
                       <td>{{$complain->location}}</td>
                       <td>{{$complain->created_at}}</td>
-                      <td class="center"><a href="#" class="btn btn-success btn-min mr-1">Accept</a><a href="#" class="btn btn-danger btn-min ml-1">Reject</a></td>
+                      <td class="center">
+                        <a href="{{url('/assign')}}" class="btn btn-success btn-min mr-1">Assign Technician</a>
+                        <a href="#" class="btn btn-danger btn-min ml-1">Reject</a></td>
                  </tr>
 
                  @endforeach
@@ -192,6 +103,28 @@
   </div>
 
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
