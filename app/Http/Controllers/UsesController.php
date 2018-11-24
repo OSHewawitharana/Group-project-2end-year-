@@ -86,10 +86,7 @@ class UsesController extends Controller
     //   return view('user.supervisor.assign');
     // }
 
-     public function feedback()
-    {
-      return view('user.customer.feedback');
-    }
+    
 
 
 

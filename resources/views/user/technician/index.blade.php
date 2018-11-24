@@ -12,32 +12,32 @@
 
     <title>Login page</title>
     <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{asset('css/techstyle.css')}}">
 
-    <section>
-        <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
-          <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
-               <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
-          </div>
-          <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-              <!-- <h2 style="color:#FFFFFF;  text-justify:inter-word;text-align:Center;font-weight:550;">ASPARAI<br><span style="margin-left:15px; margin-right:15px;"> REPAIR</span><span  style="margin-left:5px; margin-right:10px;">  &</span><span  style="margin-left:5px; margin-right:10px;"> MAINTENANCE<span><span  style="margin-left:5px; margin-right:10px;"> SERVICE<span></h2> -->
     
-                <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
-           </ul>
-        </nav>
-      </section>
+<section>
+    <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
+      <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
+           <img src="http://localhost:8000/images/logo.png" width="150px" height="50px" alt="Responsive image" class="d-inline-block align-left">
+      </div>
+      <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
+          <!-- <h2 style="color:#FFFFFF;  text-justify:inter-word;text-align:Center;font-weight:550;">ASPARAI<br><span style="margin-left:15px; margin-right:15px;"> REPAIR</span><span  style="margin-left:5px; margin-right:10px;">  &</span><span  style="margin-left:5px; margin-right:10px;"> MAINTENANCE<span><span  style="margin-left:5px; margin-right:10px;"> SERVICE<span></h2> -->
+
+            <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
+       </ul>
+    </nav>
+  </section>
 
     
 
     <section id="breadcrumb">
         <div class="container col-lg-12 mt-3">
             <ol class="breadcrumb">
-                    <li class="breadcrumb-item mt-2"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active mt-2">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Dashboard</a></li>
 
-                    <li class="navbar-nav ml-auto mt-0">
-                        <li class="nav-item dropdown mangonav_tab mt-0  mr-0">
-                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-bell fa-fw  " style="margin-top: 5px;"></i></a>
+                    <ul class="navbar-nav ml-auto mt-0">
+                        <li class="nav-item dropdown mangonav_tab mt-0  mr-2">
+                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-bell fa-fw " style="margin-top: 5px;"></i></a>
                           <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#"></a>
                           </div>
@@ -68,7 +68,7 @@
                                       
                                   </div>
                               </li>
-                            </li>
+                      </ul>
                     
             </ol>
 
@@ -85,14 +85,18 @@
                                 <a href="index.html" class="list-group-item list-group-item-action active list-group-item-primary">
                                   Dashboard
                                 </a>
-                                <a href="jobdetails.html" class="list-group-item list-group-item-action">Job Details</a>
-                                <a href="estimations.html" class="list-group-item list-group-item-action">Estimations</a>
                                 <a href="mystatus.html" class="list-group-item list-group-item-action">My Status</a>
+                                <a href="jobdetails.html" class="list-group-item list-group-item-action">Job Details</a>
                                 <a href="productstatus.html" class="list-group-item list-group-item-action">Product Status</a>
-                                
+                                <a href="estimations.html" class="list-group-item list-group-item-action">Estimations</a>
                               </div>
 
-                             
+                              <div class="well">
+                                  <h4 style="margin-top:20px;">Progress</h4>
+                                  <div class="progress mt-3">
+                                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                  </div>
+                              </div>
 
                 </div>
 
