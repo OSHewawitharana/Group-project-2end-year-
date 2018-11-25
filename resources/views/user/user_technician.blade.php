@@ -27,106 +27,127 @@
         </nav>
       </section>
 
+      <section>
+            <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"></a>
+            <ul class="navbar-nav mt-0">
+              <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+                <a class="nav-link text-left" href="{{url('employreg')}}">Job Details<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+                <a class="nav-link text-left" href="#">Estimations</a>
+              </li>
+        
+              <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+                <a class="nav-link text-left" href="#">My Status</a>
+              </li>
+        
+        
+              <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+                <a class="nav-link text-left" href="#">Product Status</a>
+              </li>
+        
+        
+            </ul>
+            <ul class="navbar-nav ml-auto mt-0">
+              
+                    <li class="navbar-nav ml-auto mt-0">
+                            <li class="nav-item dropdown mangonav_tab mt-0  mr-0">
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-bell fa-fw  " style="margin-top: 5px;"></i></a>
+                              <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"></a>
+                              </div>
+                            </li>
+                      
+                            <li class="nav-item dropdown mangonav_tab mt-0" >
+                                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><i class="fa fa-user fa-fw mt-1"></i> 
+                                          <strong style="font-weight:bold; font-size:18px;">{{ Auth::user()->fname }}(<span>{{ Auth::user()->admin }}</span>) <span class="caret"></span></strong>
+                                      </a>
+                      
+                      
+                                      <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                      
+                                          <a class="dropdown-item " href="#"><i class="fa fa-user fa-fw "></i>User Profile</a>
+                                          <a class="dropdown-item" href="#"><i class='fas fa-cog'></i> Settings</a>
+                      
+                                          <a class="dropdown-item" href="{{ route('logout') }}"
+                                             onclick="event.preventDefault();
+                                                           document.getElementById('logout-form').submit();"><i class='fas fa-sign-out-alt'></i>
+                                              {{ __('Logout') }}
+                      
+                                          </a>
+                      
+                      
+                                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                              @csrf
+                                          </form>
+                                          
+                                      </div>
+                                  </li>
+                                </li>
+                        
+    
+            </ul>
+            </div>
+            </nav>
+          </section>
+
+          <br>
+
+<body>
+    <div class="wrapper container">
+          <div class="row ">
+                <div class="col-sm-3">
+                  <div class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title" style='font-size:52px'>Tasks</h5>
+                      <i class='fas fa-tasks align:right' style='font-size:60px'></i>
+                      <br>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title " style='font-size:27px'>Make Estimations</h5>
+                      <i class="fa fa-calculator" style="font-size:60px"></i>
+                      <br>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                        <div class="card mt-2">
+                          <div class="card-body">
+                            <h5 class="card-title">My Status</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 ">
+                            <div class="card mt-2">
+                              <div class="card-body">
+                                <h5 class="card-title">Product Status</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                              </div>
+                            </div>
+                          </div>
+              </div>
+        
+
     
 
-    <section id="breadcrumb">
-        <div class="container col-lg-12 mt-3">
-            <ol class="breadcrumb">
-                    <li class="breadcrumb-item mt-2"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active mt-2">Dashboard</a></li>
-
-                    <li class="navbar-nav ml-auto mt-0">
-                        <li class="nav-item dropdown mangonav_tab mt-0  mr-0">
-                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-bell fa-fw  " style="margin-top: 5px;"></i></a>
-                          <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#"></a>
-                          </div>
-                        </li>
-                  
-                        <li class="nav-item dropdown mangonav_tab mt-0" >
-                                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><i class="fa fa-user fa-fw mt-1"></i> 
-                                      <strong style="font-weight:bold; font-size:18px;">{{ Auth::user()->fname }}(<span>{{ Auth::user()->admin }}</span>) <span class="caret"></span></strong>
-                                  </a>
-                  
-                  
-                                  <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
-                  
-                                      <a class="dropdown-item " href="#"><i class="fa fa-user fa-fw "></i>User Profile</a>
-                                      <a class="dropdown-item" href="#"><i class='fas fa-cog'></i> Settings</a>
-                  
-                                      <a class="dropdown-item" href="{{ route('logout') }}"
-                                         onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();"><i class='fas fa-sign-out-alt'></i>
-                                          {{ __('Logout') }}
-                  
-                                      </a>
-                  
-                  
-                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                          @csrf
-                                      </form>
-                                      
-                                  </div>
-                              </li>
-                            </li>
-                    
-            </ol>
-
+    
             
-           
-        </div>
-    </section>
-
-    <section id="main">
-        <div class="container col-lg-12">
-            <div class="row">
-                <div class="col-md-2">
-                        <div class="list-group ">
-                                <a href="index.html" class="list-group-item list-group-item-action active list-group-item-primary">
-                                  Dashboard
-                                </a>
-                                <a href="jobdetails.html" class="list-group-item list-group-item-action">Job Details</a>
-                                <a href="estimations.html" class="list-group-item list-group-item-action">Estimations</a>
-                                <a href="mystatus.html" class="list-group-item list-group-item-action">My Status</a>
-                                <a href="productstatus.html" class="list-group-item list-group-item-action">Product Status</a>
-                                
-                              </div>
-
-                             
-
-                </div>
-
-                <div class="col-md-10">
-                        <div class="card">
-                                <div class="card-header">
-                                  Overview
-                                </div>
-                                <div class="card-body">
-                                    <div class="col-md-3">
-                                        <div class="well">
-                                            <i class='fas fa-tasks' style='font-size:50px'></i>
-                                            <h4>Tasks</h4>
-                                        </div>
-                                    </div>
-
-                                    
-                                </div>
-                        </div>
-
-                </div>
-
-                
-
-
+       
             </div>
-
-
-        </div>
-
-    </section>
-            
-
-
     
 
     <!-- Optional JavaScript -->

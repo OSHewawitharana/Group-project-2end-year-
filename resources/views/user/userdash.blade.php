@@ -44,7 +44,7 @@
 
 
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Employee Details</a>
+        <a class="nav-link text-left" href="/feedback">Employee Details</a>
       </li>
 
 

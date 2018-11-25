@@ -1,31 +1,29 @@
-<!doctype html>
 <html lang="en" dir="ltr">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-<!--<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/master.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
 
-    <title>Employee Details page</title>
-     <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <title>Login page</title>
+ <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+<section>
+    <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
+      <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
+           <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
+      </div>
+      <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
+          
+            <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
+       </ul>
+    </nav>
+  </section>
 
-    <section>
-      <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
-        <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
-          <img src="{{ asset('images/logo.png')}}" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
-        </div>
-        <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-
-          <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
-         </ul>
-      </nav>
-    </section>
-
-     <section>
+  <section>
     <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -46,7 +44,7 @@
 
 
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Employee Details</a>
+        <a class="nav-link text-left" href="/feedback">Employee Details</a>
       </li>
 
 
@@ -64,14 +62,18 @@
                         {{ __('Logout') }}
                     </a>
 
-                    
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </li>
     </ul>
     </div>
     </nav>
   </section>
-    
+
+
+   
 
 </head>
     <body>
